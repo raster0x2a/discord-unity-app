@@ -11,6 +11,7 @@ function App() {
   const discordSdk = new DiscordSDK(VITE_DISCORD_CLIENT_ID);
 
   const [userName, setUserName] = useState("");
+  const API_ENDPOINT = 'https://discord-unity-app.fly.dev';
 
   useEffect(() => {
     setupDiscordSdk();
@@ -30,7 +31,7 @@ function App() {
     });
 
     // サーバーからaccess_tokenを取得
-    const response = await fetch("/api/token", {
+    const response = await fetch(API_ENDPOINT + "/api/token", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
