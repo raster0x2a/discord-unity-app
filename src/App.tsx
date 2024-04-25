@@ -64,13 +64,7 @@ function App() {
     ).then((reply) => reply.json());
 
     // ユーザー名の設定
-    if (user.username) {
-      setUserName(user.username);
-      console.log(user.username);
-    } else {
-      setUserName("Test by R*");
-      console.log("Test by R*");
-    }
+    setUserName(user.username);
   }
 
   return <UnityComponent userName={userName} />;
