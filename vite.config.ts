@@ -9,6 +9,7 @@ export default defineConfig({
   server: {
     host: "0.0.0.0",
 	  port: 8080,
+    /*
     proxy: {
       "/api": {
         target: "https://discord-unity-app.fly.dev",
@@ -17,6 +18,7 @@ export default defineConfig({
         ws: true,
       },
     },
+    */
     hmr: {
       clientPort: 443,
     }
