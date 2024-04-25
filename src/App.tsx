@@ -64,11 +64,12 @@ function App() {
     ).then((reply) => reply.json());
 
     // ユーザー名の設定
-    setUserName("" + user.username);
+    setUserName(user.username);
     
   }
   
   console.log("setUserName: " + userName);
+  setUserName(userName);
   return <UnityComponent userName={userName} />;
   
 }
