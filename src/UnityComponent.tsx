@@ -22,7 +22,7 @@ const UnityComponent = (props: UnityCompoonentProps) => {
       // sendMessage("オブジェクト名", "関数名", 引数)
       sendMessage("Canvas", "SetText", props.userName);
     }
-  }, []);
+  }, [isLoaded]);
 
   return <Unity id="unity-canvas" unityProvider={unityProvider} />;
 };
