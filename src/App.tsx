@@ -10,7 +10,7 @@ function App() {
   //const discordSdk = new DiscordSDK(import.meta.env.VITE_DISCORD_CLIENT_ID);
   const discordSdk = new DiscordSDK(VITE_DISCORD_CLIENT_ID);
 
-  const [userName, setUserName] = useState("");
+  const [userName, setUserName] = useState("_");
   //const API_ENDPOINT = 'https://discord-unity-app.fly.dev';
 
   useEffect(() => {
@@ -64,7 +64,7 @@ function App() {
     ).then((reply) => reply.json());
 
     // ユーザー名の設定
-    setUserName(user.username);
+    setUserName("" + user.username);
     
   }
   
