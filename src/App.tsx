@@ -11,7 +11,7 @@ function App() {
   const discordSdk = new DiscordSDK(VITE_DISCORD_CLIENT_ID);
 
   const [userName, setUserName] = useState("");
-  const API_ENDPOINT = 'https://discord-unity-app.fly.dev';
+  //const API_ENDPOINT = 'https://discord-unity-app.fly.dev';
 
   useEffect(() => {
     setupDiscordSdk();
