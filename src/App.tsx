@@ -65,6 +65,7 @@ function App() {
 
     // ユーザー名の設定
     setUserName(user.username);
+    console.log();
   }
 
   return <UnityComponent userName={userName} />;
