@@ -15,7 +15,7 @@ function App() {
 
   useEffect(() => {
     setupDiscordSdk();
-  }, []);
+  }, [userName]);
 
   async function setupDiscordSdk() {
     await discordSdk.ready();
