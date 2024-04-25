@@ -31,7 +31,7 @@ function App() {
     });
 
     // サーバーからaccess_tokenを取得
-    const response = await fetch(API_ENDPOINT + "/api/token", {
+    const response = await fetch("/api/token", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
