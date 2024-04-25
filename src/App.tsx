@@ -15,7 +15,7 @@ function App() {
 
   useEffect(() => {
     setupDiscordSdk();
-  }, [userName]);
+  }, []);
 
   async function setupDiscordSdk() {
     await discordSdk.ready();
@@ -65,11 +65,11 @@ function App() {
 
     // ユーザー名の設定
     setUserName(user.username);
-    
+    console.log("setUserName 1: " + userName);
   }
   
-  console.log("setUserName: " + userName);
-  setUserName(userName);
+  console.log("setUserName 2: " + userName);
+  //setUserName(userName);
   return <UnityComponent userName={userName} />;
   
 }
