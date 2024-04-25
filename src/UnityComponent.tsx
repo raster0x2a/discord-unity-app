@@ -17,7 +17,7 @@ const UnityComponent = (props: UnityCompoonentProps) => {
   // useEffectの対象にisLoadedを含めない場合
   // 環境によってはsendMessageが動作しない問題がある
   useEffect(() => {
-    if (isLoaded || true) {
+    if (isLoaded) {
       // Unityアプリに対してメッセージを送信
       // sendMessage("オブジェクト名", "関数名", 引数)
       sendMessage("Canvas", "SetText", props.userName);
