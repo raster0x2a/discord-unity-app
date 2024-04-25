@@ -68,7 +68,7 @@ function App() {
     console.log("setUserName: " + user.username);
   }
 
-  return <UnityComponent userName={userName} />;
+  return <UnityComponent userName={"test"} />;
   
 }
 
