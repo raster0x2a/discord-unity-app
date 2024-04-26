@@ -14,7 +14,7 @@ function App() {
   let myUserName = "__";
   //const API_ENDPOINT = 'https://discord-unity-app.fly.dev';
 
-  setupDiscordSdk();
+  //setupDiscordSdk();
   useEffect(() => {
     setupDiscordSdk();
   }, []);
