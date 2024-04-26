@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+//import { useEffect, useState } from "react";
+import { useState } from "react";
 import UnityComponent from "./UnityComponent";
 import { DiscordSDK } from "@discord/embedded-app-sdk";
 
