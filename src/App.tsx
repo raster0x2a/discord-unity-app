@@ -19,7 +19,8 @@ function App() {
   //setupDiscordSdk();
   
   useEffect(() => {
-    setupDiscordSdk();
+    //setupDiscordSdk();
+    setUserName(setupDiscordSdk());
   }, []);
 
   useEffect(() => {
@@ -76,6 +77,8 @@ function App() {
     
     setUserName(user.username);
     console.log("setUserName 1: " + userName);
+
+    return user.username;
   }
   
   
