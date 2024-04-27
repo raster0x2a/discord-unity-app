@@ -20,14 +20,13 @@ function App() {
   
   useEffect(() => {
     //setupDiscordSdk();
-    setupDiscordSdk();
-    /*
-    .then((newUserName) => {
-      console.log(newUserName);
-      setUserName(newUserName);
-    });
-    */
-    setUserName(userName => { return userName + "!" });
+    setupDiscordSdk()
+      .then((newUserName) => {
+        console.log(newUserName);
+        setUserName(newUserName  +"!");
+      });
+    
+    //setUserName(userName => { return userName + "!" });
   }, []);
 
   useEffect(() => {
@@ -85,7 +84,7 @@ function App() {
     setUserName(user.username);
     console.log("setUserName 1: " + userName);
 
-    //return user.username;
+    return user.username;
   }
   
   
