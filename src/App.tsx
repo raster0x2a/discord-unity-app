@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 //import { useState } from "react";
 import UnityComponent from "./UnityComponent";
-import { DiscordSDK } from "@discord/embedded-app-sdk";
+//import { DiscordSDK } from "@discord/embedded-app-sdk";
 
 function App() {
   //let auth;
