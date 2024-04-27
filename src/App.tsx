@@ -99,7 +99,7 @@ function App() {
   
   
   console.log("setUserName 2: " + userName);
-  setUpdate(update ? false : true);
+  //setUpdate(update ? false : true);
   return <UnityComponent userName={userName} />;
   
 }
