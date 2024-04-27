@@ -20,7 +20,11 @@ function App() {
   
   useEffect(() => {
     //setupDiscordSdk();
-    setUserName(setupDiscordSdk() + "!");
+    setupDiscordSdk().then((newUserName) => {
+      console.log(newUserName);
+      setUserName(newUserName);
+    });
+    //setUserName(newUserName);
   }, []);
 
   useEffect(() => {
