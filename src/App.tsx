@@ -4,14 +4,15 @@ import UnityComponent from "./UnityComponent";
 import { DiscordSDK } from "@discord/embedded-app-sdk";
 
 function App() {
-  let auth;
+  //let auth;
   
   const VITE_DISCORD_CLIENT_ID = "1228627729700753498";
   console.log(VITE_DISCORD_CLIENT_ID);
   //const discordSdk = new DiscordSDK(import.meta.env.VITE_DISCORD_CLIENT_ID);
-  const discordSdk = new DiscordSDK(VITE_DISCORD_CLIENT_ID);
+  //const discordSdk = new DiscordSDK(VITE_DISCORD_CLIENT_ID);
 
-  const [userName, setUserName] = useState("_");
+  const [userName] = useState("_");
+  //const [userName, setUserName] = useState("_");
   //let myUserName = "__";
   //const API_ENDPOINT = 'https://discord-unity-app.fly.dev';
 
