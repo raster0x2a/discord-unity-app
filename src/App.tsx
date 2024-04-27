@@ -27,7 +27,7 @@ function App() {
       setUserName(newUserName);
     });
     */
-    setUserName(userName + "!");
+    setUserName(userName => { return userName + "!" });
   }, []);
 
   useEffect(() => {
