@@ -1,5 +1,5 @@
-//import { useEffect, useState } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+//import { useState } from "react";
 import UnityComponent from "./UnityComponent";
 import { DiscordSDK } from "@discord/embedded-app-sdk";
 
@@ -15,13 +15,14 @@ function App() {
   //let myUserName = "__";
   //const API_ENDPOINT = 'https://discord-unity-app.fly.dev';
 
-  setupDiscordSdk();
-  /*
+  //setupDiscordSdk();
+  
   useEffect(() => {
-    setupDiscordSdk();
+    //setupDiscordSdk();
   }, []);
-  */
 
+
+  /*
   async function setupDiscordSdk() {
     await discordSdk.ready();
 
@@ -73,8 +74,9 @@ function App() {
     //myUserName = user.username
     console.log("setUserName 1: " + userName);
   }
+  */
   
-  console.log("setUserName 2: " + userName);
+  //console.log("setUserName 2: " + userName);
   //setUserName(userName);
   return <UnityComponent userName={userName} />;
   
