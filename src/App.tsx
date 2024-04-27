@@ -1,30 +1,31 @@
 import { useEffect, useState } from "react";
 //import { useState } from "react";
 import UnityComponent from "./UnityComponent";
-//import { DiscordSDK } from "@discord/embedded-app-sdk";
+import { DiscordSDK } from "@discord/embedded-app-sdk";
 
 function App() {
-  //let auth;
+  let auth;
   
   const VITE_DISCORD_CLIENT_ID = "1228627729700753498";
   console.log(VITE_DISCORD_CLIENT_ID);
   //const discordSdk = new DiscordSDK(import.meta.env.VITE_DISCORD_CLIENT_ID);
-  //const discordSdk = new DiscordSDK(VITE_DISCORD_CLIENT_ID);
+  const discordSdk = new DiscordSDK(VITE_DISCORD_CLIENT_ID);
 
-  const [userName] = useState("_");
-  //const [userName, setUserName] = useState("_");
+  //const [userName] = useState("_");
+  const [userName, setUserName] = useState("_");
   //let myUserName = "__";
   //const API_ENDPOINT = 'https://discord-unity-app.fly.dev';
 
   //setupDiscordSdk();
   
   useEffect(() => {
-    //setupDiscordSdk();
-    console.log(2);
+    setupDiscordSdk();
   }, []);
 
+  useEffect(() => {
+    console.log("setUserName 3: " + userName);
+  }, [userName]);
 
-  /*
   async function setupDiscordSdk() {
     await discordSdk.ready();
 
@@ -72,13 +73,13 @@ function App() {
     ).then((reply) => reply.json());
 
     // ユーザー名の設定
+    
     setUserName(user.username);
-    //myUserName = user.username
     console.log("setUserName 1: " + userName);
   }
-  */
   
-  //console.log("setUserName 2: " + userName);
+  
+  console.log("setUserName 2: " + userName);
   //setUserName(userName);
   return <UnityComponent userName={userName} />;
   
