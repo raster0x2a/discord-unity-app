@@ -13,19 +13,27 @@ function App() {
 
   //const [userName] = useState("_");
   const [userName, setUserName] = useState("_");
-  let tmpUserName = "__";
+  //let tmpUserName = "__";
   //const API_ENDPOINT = 'https://discord-unity-app.fly.dev';
 
+
+  const [update, setUpdate] = useState<boolean>(false);
+  
+  
   //setupDiscordSdk();
   
   useEffect(() => {
     //setupDiscordSdk();
+    console.log("setUserName 3: " + userName);
     setupDiscordSdk()
       .then((newUserName) => {
-        console.log(newUserName);
+        console.log("setUserName 5: " + userName);
         setUserName(newUserName + "!");
       });
-    setUserName(tmpUserName);
+    console.log("setUserName 4: " + userName);
+    setUserName(userName + "!");
+    setUpdate(update ? false : true);
+    //setUserName(tmpUserName);
     //setUserName(userName => { return userName + "!" });
   }, []);
 
@@ -82,8 +90,8 @@ function App() {
     // ユーザー名の設定
     
     setUserName(user.username);
-    tmpUserName = user.username
-    setUserName((tmpUserName) => { return tmpUserName + "!"});
+    //tmpUserName = user.username
+    //setUserName((tmpUserName) => { return tmpUserName + "!"});
     console.log("setUserName 1: " + userName);
 
     return user.username;
@@ -91,7 +99,7 @@ function App() {
   
   
   console.log("setUserName 2: " + userName);
-  
+  setUpdate(update ? false : true);
   return <UnityComponent userName={userName} />;
   
 }
