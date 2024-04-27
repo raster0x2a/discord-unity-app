@@ -23,7 +23,7 @@ function App() {
     setupDiscordSdk()
       .then((newUserName) => {
         console.log(newUserName);
-        setUserName(newUserName  +"!");
+        setUserName(newUserName + "!");
       });
     
     //setUserName(userName => { return userName + "!" });
@@ -82,6 +82,7 @@ function App() {
     // ユーザー名の設定
     
     setUserName(user.username);
+    setUserName((userName) => { return userName + "!"});
     console.log("setUserName 1: " + userName);
 
     return user.username;
@@ -89,7 +90,7 @@ function App() {
   
   
   console.log("setUserName 2: " + userName);
-  setUserName((userName) => { return userName + "!"});
+  
   return <UnityComponent userName={userName} />;
   
 }
