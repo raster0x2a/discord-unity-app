@@ -19,7 +19,7 @@ function App() {
   
   useEffect(() => {
     //setupDiscordSdk();
-    console.log(1);
+    console.log(2);
   }, []);
 
 
