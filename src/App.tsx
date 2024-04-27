@@ -8,7 +8,7 @@ function App() {
   const VITE_DISCORD_CLIENT_ID = "1228627729700753498";
   const discordSdk = new DiscordSDK(VITE_DISCORD_CLIENT_ID);
 
-  const [userName, setUserName] = useState("");
+  const [userName, setUserName] = useState("_");
 
   useEffect(() => {
     setupDiscordSdk();
