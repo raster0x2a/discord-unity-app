@@ -24,6 +24,11 @@ const UnityComponent = (props: UnityCompoonentProps) => {
     }
   }, [isLoaded]);
 
+  // ADD
+  useEffect(() => {
+    sendMessage("Canvas", "SetText", props.userName);
+  }, [props.userName]);
+
   return <Unity id="unity-canvas" unityProvider={unityProvider} />;
 };
 
